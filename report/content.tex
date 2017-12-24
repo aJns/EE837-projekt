@@ -1,0 +1,88 @@
+% what your team did, role of your team members, implementation details, code explanation, performance, analysis
+
+\section{Our idea}
+
+We wanted to use transfer learning and object detection in our project. Our
+original idea was to use a pretrained network, for example VGG16, and implement
+an object detection system on top off it. We wanted to do the object detection
+with YOLO~\cite{DBLP:journals/corr/RedmonDGF15}, because it seemed like it
+would be simple enough to implement and train with our resources. Because of
+object detection, our dataset should be something that has multiple different
+object classes in it, PASCAL VOC for example.
+
+However, we simply ran out of time. First we selected a much simpler dataset,
+the ``Ships in Satellite Imagery'' set from kaggle~\cite{ships}. It only
+contains two classes, ship or no ship. It's size is only very limited. Our new
+plan was to train a classifier to detect the ships, and then add a much simpler
+version of YOLO on top of it. However, we only really completed the classifier,
+so in the end, our project is just on trying to classify the ships on the
+aforementioned dataset.
+
+
+\section{Implementation}
+
+We did the assignment using Python 3 and the Keras deep learning library.
+Training was done on the FloydHub cloud computing platform.
+
+In addition to the codes and report, our zip folder contains the trained keras
+model, and the log file from training.
+
+\subsection{Team roles}
+We shared the work equally. The planning of the project was done together, and
+we consulted each other on trying to come up with the implementation.
+
+\subsection{Code details}
+
+The code itself is very simple. It's divided into 3 files.
+\begin{verbatim}
+model.py
+data.py
+train_classifier.py
+\end{verbatim}
+The file \verb|model.py| contains the actual model, and a function that returns
+the model. \verb|train_classifier.py| instantiates and trains the model.
+\verb|data.py| contains a helper function to read in the data set.  The bash
+script \verb|run_floydhub.sh| is just to make model training easier.
+
+\subsection{Model architecture and training}
+
+The model consists of 4 convolutional ``blocks'' and one dense block at the
+end. All convolutional layers use ReLU as the activation function.  The last
+two blocks consist of a \(3\times3\) layer, a \(2\times2\) layer and a
+\(1\times1\) layer. The first one is the same, but with 4 \(3\times3\) layers,
+and the second one has 2 \(3\times3\) layers.
+
+At the end of a convolutional block there's a max pooling layer with a pool
+size of 2, and a dropout layer with a \num{25}\% chance of dropout. All the
+conv-layers use zero-padding, so that the output dimensions are the same. The
+number of filters increases from 64 to 512, doubling at each block. The goal of
+this architecture was to get a lot of non-linearity, with a manageable
+parameter count.
+
+The dense layer consists of 1024 unit layer, with ReLU activation and a
+\num{50}\% chance of dropout. The final layer has 1 unit with sigmoid
+activation. The Appendix~\ref{sec:model} contains just the code to define the
+appendix, for an easy overview. The code should be clear enough to understand
+without knowledge of Python or Keras.
+
+The dataset contains 2800 \(80\times80\) RGB images, which either contain or
+don't contain a ship. Training is done with a batch size of 100, for 20 epochs.
+The data loading function shuffles the data, from which we take 10\% for
+validation. The data is also shuffled before each epoch. We use the adam
+optimizer, and the binary crossentropy loss function.
+
+\section{Performance}
+
+During training the model reported --- at best --- an accuracy of \num{0.9857}
+on the validation set. Training took about 10 minutes.
+
+\subsection{Analysis}
+
+During the creation of the model we tried to first use bigger filters at the
+beginning of the model, \(7\times7\) on the first block, and \(5\times5\) on
+the second. However, they did not improve performance and made training much
+slower. We opted to replace them with their equivalent filters; 4 and 2
+\(3\times3\) layers respectively. Our final network is not only much more
+accurate, but also faster to train.
+
+

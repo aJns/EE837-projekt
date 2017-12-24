@@ -1,0 +1,97 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{DBLP:journals/corr/RedmonDGF15}{article}{}
+      \name{author}{4}{}{%
+        {{hash=99bced2e56a5253f3fe98a5f04e6d9b2}{%
+           family={Redmon},
+           familyi={R\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=df9c7ca421e3610d048bb919a38a83f6}{%
+           family={Divvala},
+           familyi={D\bibinitperiod},
+           given={Santosh\bibnamedelima Kumar},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=008bd42dfafb05123122b3d372206abc}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=396c6ddedb6f986906fc3e4994d19974}{%
+           family={Farhadi},
+           familyi={F\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{820693c6fcb43716519af112ffe42a11}
+      \strng{fullhash}{88d96cf03ffbbfee44cf8478656f0953}
+      \strng{bibnamehash}{88d96cf03ffbbfee44cf8478656f0953}
+      \strng{authorbibnamehash}{88d96cf03ffbbfee44cf8478656f0953}
+      \strng{authornamehash}{820693c6fcb43716519af112ffe42a11}
+      \strng{authorfullhash}{88d96cf03ffbbfee44cf8478656f0953}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
+      \field{volume}{abs/1506.02640}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1506.02640
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1506.02640
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1506.02640
+      \endverb
+    \endentry
+    \entry{ships}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e9e3aef1ad49ba5ad76d4cc460d5c4c3}{%
+           family={rhammell},
+           familyi={r\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9e3aef1ad49ba5ad76d4cc460d5c4c3}
+      \strng{fullhash}{e9e3aef1ad49ba5ad76d4cc460d5c4c3}
+      \strng{bibnamehash}{e9e3aef1ad49ba5ad76d4cc460d5c4c3}
+      \strng{authorbibnamehash}{e9e3aef1ad49ba5ad76d4cc460d5c4c3}
+      \strng{authornamehash}{e9e3aef1ad49ba5ad76d4cc460d5c4c3}
+      \strng{authorfullhash}{e9e3aef1ad49ba5ad76d4cc460d5c4c3}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ships in Satellite Imagery}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/rhammell/ships-in-satellite-imagery
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/rhammell/ships-in-satellite-imagery
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

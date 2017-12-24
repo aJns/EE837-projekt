@@ -1,0 +1,15 @@
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'assignment.blg'
+[20] biber:313> INFO - === su joulu 24, 2017, 11:23:27
+[36] Biber.pm:371> INFO - Reading 'assignment.bcf'
+[88] Biber.pm:857> INFO - Found 2 citekeys in bib section 0
+[98] Biber.pm:3981> INFO - Processing section 0
+[107] Biber.pm:4154> INFO - Looking for bibtex format file 'assignment.bib' for section 0
+[107] bibtex.pm:1479> INFO - LaTeX decoding ...
+[110] bibtex.pm:1305> INFO - Found BibTeX data source 'assignment.bib'
+[126] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[126] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[126] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[126] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[131] bbl.pm:617> INFO - Writing 'assignment.bbl' with encoding 'UTF-8'
+[132] bbl.pm:720> INFO - Output to assignment.bbl

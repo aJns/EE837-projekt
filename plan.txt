@@ -1,0 +1,19 @@
+# New Plan
+
+Käytä ships datasettiä.
+1. Treenataan classifikaatioverkko, perus onko kuvassa laiva vai ei
+2. Käytetään tätä verkkoa pohjana YOLO-lite objektidetektorille
+    2.1 YOLO-lite = Prediktataan vaan onko kuvassa laiva vai ei, ja mikä sen bounding box on
+
+
+
+Use transfer learning and YOLO for object detection
+
+# Understanding YOLO
+
+Se jakaminen tapahtuu niin että sen vikan CONV layerin dimensiot vastaa sitä
+gridiä. Elix jos halutaan 7x7 grid (eli seittemän kertaa seittemän laatikkoo),
+niin sen vikan layerin dimensiot on 7x7xUnittien lkm
+
+# Transfer learning
+https://stackoverflow.com/questions/41378461/how-to-use-models-from-keras-applications-for-transfer-learnig/41386444#41386444
