@@ -10,43 +10,41 @@ def create_classifier(input_shape):
     x = inputs
 
 ## CONV_1 ####################################################################
-    filter_count = 128
-    x = Conv2D(filters=filter_count, kernel_size=(7,7), padding="same", activation="relu")(x)
+    filter_count = 64
     x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
     x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(2,2), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(1,1), padding="same", activation="relu")(x)
     x = Dropout(0.25)(x)
     x = MaxPooling2D()(x)
 
 
 ## CONV_2 ####################################################################
-    filter_count = 256
-    x = Conv2D(filters=filter_count, kernel_size=(5,5), padding="same", activation="relu")(x)
+    filter_count = 128
     x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
     x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(2,2), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(1,1), padding="same", activation="relu")(x)
     x = Dropout(0.25)(x)
     x = MaxPooling2D()(x)
 
 
 ## CONV_3 ####################################################################
-    filter_count = 512
+    filter_count = 256
     x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
-    x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
-    x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(2,2), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(1,1), padding="same", activation="relu")(x)
     x = Dropout(0.25)(x)
     x = MaxPooling2D()(x)
 
 
 ## CONV_4 ####################################################################
-    filter_count = 1024
+    filter_count = 512
     x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
-    x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
-    x = Dropout(0.25)(x)
-    x = MaxPooling2D()(x)
-
-
-## CONV_5 ####################################################################
-    filter_count = 2048
-    x = Conv2D(filters=filter_count, kernel_size=(3,3), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(2,2), padding="same", activation="relu")(x)
+    x = Conv2D(filters=filter_count, kernel_size=(1,1), padding="same", activation="relu")(x)
     x = Dropout(0.25)(x)
     x = MaxPooling2D()(x)
 
